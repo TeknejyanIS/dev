@@ -1,0 +1,25 @@
+body {
+  background-image: url(../images/bg.jpg);
+}
+.product-item {
+  background-color: rgba(255, 0, 0, 0.5);
+  color: greenyellow;
+  padding: 10px 15px;
+  margin: 50px 0;
+
+  border-radius: 50px 0px;
+  /* outline: 1px  solid; */
+  box-shadow: black 0 0 20px 10px;
+}
+.product-item_title {
+  width: 50%;
+  height: auto;
+  box-sizing: border-box;
+  margin: 10px auto;
+  padding: 10px 15px;
+}
+.href {
+	display: flex;
+	justify-content: space-between;
+	font-size: 20px;
+}

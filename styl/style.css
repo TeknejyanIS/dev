@@ -1,0 +1,29 @@
+* {
+	box-sizing: border-box;
+}
+h2 {
+	text-transform: uppercase;
+	color: rgb(162, 0, 255);
+	text-align: center;
+}
+div {
+	font-style: italic;
+	text-align: center;
+}
+p {
+	text-align: center;
+}
+.brown {
+	color: green;
+}
+#heading {
+	border-bottom: 1px solid #000;
+}
+a {
+	text-decoration: none;
+}
+.href {
+	color: blueviolet;
+	text-align: right;
+	font-size: 20px;
+}

@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300&display=swap");
+html {
+	font-size: 10px;
+}
+body {
+	font-size: 14px;
+}
+.fontlist {
+	list-style: armenian;
+}
+.size {
+	font-family: "Noto Sans JP", sans-serif;
+}
+
+.simple {
+	font-size: 20px;
+	font-weight: bolder;
+	font-style: normal;
+	text-decoration: overline;
+	letter-spacing: 1px;
+	text-shadow: red 0px 0px 10px;
+	text-transform: lowercase;
+}
+.complex {
+	font-size: 20px;
+}
+.complex span {
+	font-size: 1.2em;
+}
+.more {
+	font-size: 2vw;
+}
+.href {
+	display: flex;
+	justify-content: space-between;
+	font-size: 20px;
+}

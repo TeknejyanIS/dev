@@ -1,0 +1,106 @@
+html,
+body {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a {
+	display: inline-block;
+	margin: 10px;
+	color: chocolate;
+}
+
+a:link:hover {
+	color: gold;
+}
+
+a:visited:hover {
+	color: green;
+}
+
+a[href="https:ya.ru"] {
+	text-transform: uppercase;
+}
+a:not(.bing) {
+	color: chartreuse;
+}
+input {
+	border: none;
+	border-bottom: 2px solid red;
+	outline: none;
+}
+
+input:focus {
+	border-bottom: 2px solid black;
+}
+
+.products {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.product_item {
+	width: 280px;
+	height: 200px;
+	margin-top: 20px;
+	margin-right: 20px;
+	background-color: darkkhaki;
+}
+
+.product_item:first-child {
+    background-color: darkmagenta;
+}
+.product_item:last-child {
+    background-color: rgb(255, 6, 6);
+} */
+
+.product_item:first-of-type {
+    background-color: rgb(255, 14, 255);
+}
+.product_item:last-of-type {
+    background-color: rgb(51, 255, 0);
+}
+
+.product_item:nth-child(3) {
+	background-color: rgb(206, 214, 52);
+}
+
+.product_item:nth-child(odd) {
+	background-color: rgb(206, 214, 52);
+}
+
+.product_item:nth-child(even) { 
+    background-color: rgb(5, 5, 5);
+}
+.product_item:nth-child(-n + 3) {
+	margin-top: 0px;
+}
+
+.product_item:nth-child(3n) {
+	margin-right: 0px;
+	background-color: rgb(5, 5, 5);
+}
+
+a::before {
+	content: '@';
+}
+
+a::after {
+	content: '>>';
+	margin-left: 10px;
+}
+
+a::selection {
+	background-color: deeppink;
+	color: floralwhite;
+}
+
+.products:hover .product_item:nth-child(1) {
+	background-color: fuchsia;
+}
+.href {
+	display: flex;
+	justify-content: space-between;
+	font-size: 20px;
+}
