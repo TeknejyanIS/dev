@@ -35,7 +35,14 @@ http.createServer((req, res) => {
             break
         default : contType = 'text/html'
     }
-
+    if ( fs.existsSync(process.cwd()+req.url) && path.extname(process.cwd()+req.url) == '' ) {
+        fs.readdir(process.cwd() + req.url, 'utf-8', (err, files) => {
+            if (err) console.log('ERROR = ', err)
+            files.forEach(file => res.write(file + '\n'))
+            res.end()
+        })
+    } 
+    else 
     fs.readFile(process.cwd() + req.url, (err, data) => {
         if (err)
             fs.readFile(process.cwd() + '/html/404.html', 'utf8', (err, data) => {
