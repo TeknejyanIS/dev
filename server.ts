@@ -8,35 +8,35 @@ http.createServer((req, res) => {
     
     if (req.url === '/') {
         req.url = '/html/index.html'
-        format = path.extname(req.url)
-        contType = 'text/css'
+        contType = 'text/html'
     }
+    format = path.extname(req.url)
     switch (format) {
-        case ".html":
-            contType = "text/html"
+        case '.html':
+            contType = 'text/html'
             break
-        case ".css":
-            contType = "text/css"
+        case '.css':
+            contType = 'text/css'
             break
-        case ".jpg":
-            contType = "image/jpg"
+        case '.jpg':
+            contType ='image/jpg'
             break
-        case ".jpeg":
-            contType = "image/jpeg"
+        case '.jpeg':
+            contType = 'image/jpeg'
             break
-        case ".webp":
-            contType = "image/webp"
+        case '.webp':
+            contType = 'image/webp'
             break
-        case ".png":
-            contType = "image/png"
+        case '.png':
+            contType = 'image/png'
             break
-        case "":
-            contType = "text/plain"
+        case '':
+            contType = 'text/plain'
             break
         default : contType = 'text/html'
     }
 
-    fs.readFile(process.cwd() + req.url, 'utf8', (err, data) => {
+    fs.readFile(process.cwd() + req.url, (err, data) => {
         if (err)
             fs.readFile(process.cwd() + '/html/404.html', 'utf8', (err, data) => {
                 if (err) throw err
@@ -44,6 +44,7 @@ http.createServer((req, res) => {
                 res.end(data, 'utf-8')
             })
         else {
+            if (err) throw err
             res.writeHead(200, { 'Content-type': contType })
             res.end(data)
         }
