@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        h1.jerry Hello, World
+        a(href="https://www.google.ru",target="_self") google
+        include ./header.pug
+        nav.menu
+            ul.menu_item
+                each value, index in {'Site 1' : 'exem1', 'Site 2' : 'exem2', 'Site 3' : 'exem3'}
+                    li
+                        a(href="./"+value+".html")= index
+        include ./size.pug
+        include ./mixin.pug

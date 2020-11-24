@@ -1,0 +1,28 @@
+//- Mixin declaration
+mixin article(title)
+    article.article
+        h1= title
+        if block
+            block
+        else
+            p Нет контента для отображения
+
+//- Call mixin
++article("Заголовок страницы")
+    p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    p Lorem ipsum dolor sit amet, consectetur adipisicing elit
+
+
+mixin link(href, name)
+    //- attributes == {class: "link-btn"}
+    a(class!= attributes.class href= href)= name
+
++link('/link.html', 'linkName')(class="link-btn")
+
+
+mixin list(id, ...items)
+    ul(id= id)
+        each item in items
+            li= item
+
++list('myList', 1, 2, 3, 4,5,7,7)
