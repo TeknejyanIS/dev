@@ -11,6 +11,7 @@ div {
 	text-align: center;
 }
 p {
+	color: blanchedalmond;
 	text-align: center;
 }
 .brown {
@@ -20,10 +21,17 @@ p {
 	border-bottom: 1px solid #000;
 }
 a {
+	color: blanchedalmond;
 	text-decoration: none;
 }
 .href {
 	color: blueviolet;
 	text-align: right;
 	font-size: 20px;
+}
+body {
+	background-color: black;
+}
+img {
+	margin-left: calc(50% - 225px);
 }

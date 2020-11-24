@@ -4,12 +4,14 @@ const path = require('path')
 
 let contType
 let format
+let count = 0
 http.createServer((req, res) => {
-    
+
     if (req.url === '/') {
         req.url = '/html/index.html'
         contType = 'text/html'
     }
+    count += 1
     format = path.extname(req.url)
     switch (format) {
         case '.html':
@@ -35,6 +37,7 @@ http.createServer((req, res) => {
             break
         default : contType = 'text/html'
     }
+
     if ( fs.existsSync(process.cwd()+req.url) && path.extname(process.cwd()+req.url) == '' ) {
         fs.readdir(process.cwd() + req.url, 'utf-8', (err, files) => {
             if (err) console.log('ERROR = ', err)
@@ -56,6 +59,12 @@ http.createServer((req, res) => {
             res.end(data)
         }
     })
+    console.log('============REQUEST №',count,'============')
+    console.log(req.url)
+    console.log('===================================')
+    console.log('============CONTENT №',count,'============')
+    console.log(contType)
+    console.log('===================================')
 }).listen(3000, ()=>{
     console.log("Сервер запущен по http://localhost:3000");
 })

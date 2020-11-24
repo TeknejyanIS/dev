@@ -1,4 +1,10 @@
 h1{
+    margin-top: calc(50% - 20px);
+    font-size: 40px;
+    height: 40px;
     text-align: center;
     color: chartreuse;
+}
+body {
+    background-color: black;
 }
